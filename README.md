@@ -20,4 +20,20 @@ This project demonstrates the **extraction** phase of an ETL pipeline using Pyth
    - New records since the last timestamp
    - Updates `last_extraction.txt`
 
+## Lab 5 – Load
+
+### ✅ Loading Method Used:
+We used **Pandas DataFrames** and saved the data as **Parquet files** – an efficient, columnar storage format.
+
+### 🗂️ Output Files:
+- `loaded_data/full_data.parquet`
+- `loaded_data/incremental_data.parquet`
+
+### 🔢 Sample Code:
+```python
+import pandas as pd
+
+df = pd.read_csv("transformed_full.csv")
+df.to_parquet("loaded_data/full_data.parquet", index=False)
+
 
