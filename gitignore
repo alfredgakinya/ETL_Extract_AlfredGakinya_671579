@@ -3,3 +3,29 @@ __pycache__/
 *.log
 *.sqlite
 last_extraction.txt
+
+
+# Ignore Python bytecode and Jupyter Notebook checkpoints
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+
+# Ignore Parquet and SQLite files from loading step
+*.parquet
+*.db
+
+# Ignore loaded data output folder
+loaded_data/
+
+# Ignore CSV outputs from transformation (optional)
+transformed_full.csv
+transformed_incremental.csv
+
+# Ignore environment or config files (optional)
+.env
+.DS_Store
+
+# VS Code config (if using)
+.vscode/
